@@ -1,9 +1,12 @@
 {
-  description = "Weave a Neovim configuration built with Nixvim";
+  description = "Corgix a Neovim configuration built with Nixvim";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixvim.url = "github:nix-community/nixvim";
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
@@ -27,22 +30,17 @@
       }: let
         nixvimLib = nixvim.lib.${system};
         nixvim' = nixvim.legacyPackages.${system};
-        nixvimModule = {
-          inherit pkgs;
+        nvim = nixvim'.makeNixvimWithModule {
           module = import ./config;
+          pkgs = import inputs.nixpkgs {inherit system;};
         };
-        nvim = nixvim'.makeNixvimWithModule nixvimModule;
       in {
-        checks = {
-          default = nixvimLib.check.mkTestDerivationFromNvim {
-            inherit nvim;
-            name = "A nixvim configuration.";
-          };
+        checks.default = nixvimLib.check.mkTestDerivationFromNvim {
+          inherit nvim;
+          name = "A nixvim configuration.";
         };
 
-        packages = {
-          default = nvim;
-        };
+        packages.default = nvim;
       };
     };
 }

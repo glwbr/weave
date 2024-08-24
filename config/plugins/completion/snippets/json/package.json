@@ -1,0 +1,13 @@
+{
+  "name": "hvim-snips",
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "nix"
+        ],
+        "path": "./nix.json"
+      }
+    ]
+  }
+}
