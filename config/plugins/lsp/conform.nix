@@ -2,6 +2,7 @@
   extraPackages = with pkgs; [
     alejandra
     gofumpt
+    golines
     jq
     nodePackages.intelephense
     nodePackages.jsonlint
@@ -19,7 +20,7 @@
 
       formatters_by_ft = {
         css = ["prettierd" "prettier"];
-        go = ["gofumpt"];
+        go = ["gofumpt" "golines"];
         html = ["prettierd" "prettier"];
         javascript = ["prettierd" "prettier"];
         json = ["jq"];
