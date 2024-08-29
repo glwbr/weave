@@ -16,7 +16,7 @@ https://www.markdownguide.org/basic-syntax/#reference-style-links
 
   <div align="center">
     <p>A Flake configuration built with NixVim and Corgis flexibility in mind?</p>
-    <p>English | <strong><a href="https://github.com/glwbr/weave/blob/main/docs/pt-br/README.md">Português</a></strong></p>
+    <p>English | <strong><a href="https://github.com/glwbr/corgix/blob/main/docs/pt-br/README.md">Português</a></strong></p>
   </div>
 </div>
 
