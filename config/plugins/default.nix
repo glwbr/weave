@@ -4,5 +4,6 @@ _: {
     ./harpoon
     ./treesitter
     ./telescope
+    ./todo-comments
   ];
 }
