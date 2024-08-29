@@ -36,7 +36,7 @@
         lua-ls.enable = true;
         marksman.enable = true;
         nil-ls.enable = true;
-        # nixd.enable = true;
+        ruff.enable = true;
         templ.enable = true;
         tsserver.enable = true;
         volar.enable = true;
