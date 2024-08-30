@@ -19,6 +19,7 @@ https://www.markdownguide.org/basic-syntax/#reference-style-links
     <p>English | <strong><a href="https://github.com/glwbr/corgix/blob/main/docs/pt-br/README.md">Português</a></strong></p>
   </div>
 </div>
+<!-- END HEADER -->
 
 <!-- ABOUT -->
 
@@ -36,7 +37,7 @@ With this project, I want to share not just the technical details, but also my j
 
 I just wanted to name this project, and wanted to be a funny name. I like Corgis, Neovim, and Nix... so naturally, Corgix was the only choice obviously. Also, _~~I don't know how to name things~~_.
 
-<!-- END HEADER -->
+<!-- END ABOUT -->
 
 <!-- IMAGES -->
 
