@@ -3,6 +3,7 @@ _: {
     ./colorschemes
     ./completion
     ./harpoon
+    ./git
     ./lsp
     ./telescope
     ./treesitter
