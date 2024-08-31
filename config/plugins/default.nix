@@ -1,10 +1,11 @@
 _: {
   imports = [
     ./colorschemes
+    ./completion
     ./harpoon
     ./lsp
-    ./treesitter
     ./telescope
+    ./treesitter
     ./todo-comments
   ];
 }
