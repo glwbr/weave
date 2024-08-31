@@ -86,7 +86,7 @@ _: {
 
     # Text editing settings
     # Manage how text editing features like auto-completion and line wrapping behave.
-    completeopt = "menu,menuone,noselect";
+    completeopt = ["menu" "menuone" "noselect"];
     textwidth = 0;
 
     # Update time settings
