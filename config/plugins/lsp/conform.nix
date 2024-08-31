@@ -4,11 +4,10 @@
     gofumpt
     golines
     jq
-    nodePackages.intelephense
     nodePackages.jsonlint
-    nodePackages.prettier
-    prettierd
+    php83Packages.php-cs-fixer
     phpactor
+    prettierd
     ruff
     stylua
   ];
@@ -16,28 +15,29 @@
   plugins.conform-nvim = {
     enable = true;
     settings = {
+      log_level = "error";
       notify_on_error = true;
+      notify_no_formatters = true;
 
       formatters_by_ft = {
-        css = ["prettierd" "prettier"];
+        css = ["prettierd"];
         go = ["gofumpt" "golines"];
-        html = ["prettierd" "prettier"];
-        javascript = ["prettierd" "prettier"];
+        html = ["prettierd"];
+        javascript = ["prettierd"];
         json = ["jq"];
         lua = ["stylua"];
-        markdown = ["prettierd" "prettier"];
+        markdown = ["prettierd"];
         nix = ["alejandra"];
-        php = ["intelephense" "phpactor"];
+        php = ["phpactor" "php-cs-fixer"];
         python = ["ruff_format" "ruff_fix"];
-        typescript = ["prettierd" "prettier"];
-        yaml = ["prettierd" "prettier"];
+        typescript = ["prettierd"];
+        yaml = ["prettierd"];
         "_" = ["trim_whitespace"];
       };
 
       format_on_save = {
         lspFallback = true;
         timeoutMs = 500;
-        # stop_after_first = true;
       };
     };
   };
