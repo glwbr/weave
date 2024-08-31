@@ -4,11 +4,6 @@ _: {
     extensions.fzf-native.enable = true;
 
     keymaps = {
-      "<leader>s." = {
-        action = "oldfiles";
-        options.desc = "[.] [S]earch Recently Opened Files";
-      };
-
       "<leader>s/" = {
         action = "current_buffer_fuzzy_find";
         options.desc = "[/] Fuzzily [S]earch in Current Buffer";
@@ -16,10 +11,10 @@ _: {
 
       "<leader>sb" = {
         action = "buffers";
-        options.desc = "[S]earch Open [B]uffers";
+        options.desc = "[S]earch Existing [B]uffers";
       };
 
-      "<leader>sD" = {
+      "<leader>sd" = {
         action = "diagnostics";
         options.desc = "[S]earch Workspace [D]iagnostics";
       };
@@ -31,7 +26,7 @@ _: {
 
       "<leader>sg" = {
         action = "live_grep";
-        options.desc = "[S]earch in Files with Live [G]rep";
+        options.desc = "[S]earch by [G]rep";
       };
 
       "<leader>sh" = {
@@ -39,14 +34,19 @@ _: {
         options.desc = "[S]earch Neovim [H]elp Pages";
       };
 
-      "<leader>sw" = {
+      "<leader>s." = {
+        action = "oldfiles";
+        options.desc = "[S]earch Recently Opened Files ('.' for repeat)";
+      };
+
+      "<leade>sw" = {
         action = "grep_string";
         options.desc = "[S]earch Current [W]ord";
       };
     };
 
     settings.defaults = {
-      prompt_prefix = "   ";
+      prompt_prefix = "   ";
       selection_caret = "  ";
       entry_prefix = "  ";
       sorting_strategy = "ascending";
@@ -65,9 +65,7 @@ _: {
 
       dynamic_preview_title = true;
 
-      set_env = {
-        COLORTERM = "truecolor";
-      };
+      set_env.COLORTERM = "truecolor";
 
       file_ignore_patterns = [
         ".direnv"
