@@ -19,7 +19,7 @@
           "K" = "hover";
           "<leader>rn" = "rename";
           "<leader>ca" = "code_action";
-          "gI" = "implementation";
+          "gi" = "implementation";
           "gt" = "type_definition";
         };
       };
@@ -27,12 +27,13 @@
       servers = {
         cssls.enable = true;
         dockerls.enable = true;
+        docker-compose-language-service.enable = true;
         elixirls.enable = true;
         gopls.enable = true;
         html.enable = true;
         htmx.enable = true;
         jsonls.enable = true;
-        intelephense.enable = true;
+        phpactor.enable = true;
         lua-ls.enable = true;
         marksman.enable = true;
         nil-ls.enable = true;
