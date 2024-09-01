@@ -30,6 +30,10 @@ in {
     (mkNormap "N" "Nzzzv" "Jump to the next search result and center the line")
     (mkNormap "<leader>pv" "<cmd>Ex<cr>" "[P]roject [V]iew")
     (mkNormap "<leader>x" "<cmd>!chmod +x %<cr>" "Make the current file e[x]ecutable")
+    (mkNormap "<C-j>" "<C-w><C-j>" "Switch to the window below")
+    (mkNormap "<C-k>" "<C-w><C-k>" "Switch to the window above")
+    (mkNormap "<C-h>" "<C-w><C-h>" "Switch to the window on the left")
+    (mkNormap "<C-l>" "<C-w><C-l>" "Switch to the windows on the right")
 
     # Insert mode mappings
     (mkInsmap "<C-c>" "<Esc>" "Exit insert mode")
