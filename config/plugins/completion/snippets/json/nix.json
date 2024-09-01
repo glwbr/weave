@@ -38,6 +38,17 @@
     ],
     "description": "Create a Nix Flake"
   },
+  "Default Nix Module": {
+    "prefix": "module",
+    "body": [
+      "_: {",
+      "  imports = [",
+      "    ${1:path}",
+      "  ];",
+      "}"
+    ],
+    "description": "Create a .nix file"
+  },
   "Nix Option": {
     "prefix": "option",
     "body": [
