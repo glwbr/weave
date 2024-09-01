@@ -1,5 +1,6 @@
 _: {
   imports = [
+    ./colorschemes
     ./plugins
 
     ./autocmds.nix

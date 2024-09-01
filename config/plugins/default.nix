@@ -1,6 +1,5 @@
 _: {
   imports = [
-    ./colorschemes
     ./completion
     ./harpoon
     ./git
