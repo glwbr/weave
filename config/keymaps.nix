@@ -1,4 +1,5 @@
 _: let
+  #TODO: export these functions to lib
   mkKeymap = mode: key: action: desc: {
     inherit mode key action;
     options = {
@@ -44,5 +45,11 @@ in {
     (mkKeymap ["n" "v"] "<leader>y" "\"+y" "[Y]ank selection to system clipboard")
     (mkKeymap ["n" "v"] "<leader>Y" "\"+Y" "[Y]ank entire line to system clipboard")
     (mkKeymap ["n" "i"] "<esc>" "<cmd>noh<cr><esc>" "Clear search highlights and [E]scape")
+
+    #TODO: check luasnip extraLuaConfig
+    #(mkKeymap ["s" "i"] "<C-k>" "<cmd> lua if vim.snippet.active({ direction = 1 }) then vim.snippet.jump(1) end <cr>" "")
+    # (mkKeymap ["s" "i"] "<C-j>" "<cmd> lua if vim.snippet.active({ direction = -1 }) then vim.snippet.jump(-1) end <cr>" "")
+    (mkKeymap ["s" "i"] "<C-k>" "<cmd>JumpOrExpand<cr>" "Jump or expand the next snippet placeholder")
+    (mkKeymap ["s" "i"] "<C-j>" "<cmd>JumpBackward<cr>" "Jump to the previous snippet placeholder")
   ];
 }
