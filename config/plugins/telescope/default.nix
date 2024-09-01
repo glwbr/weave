@@ -39,7 +39,7 @@ _: {
         options.desc = "[S]earch Recently Opened Files ('.' for repeat)";
       };
 
-      "<leade>sw" = {
+      "<leader>sw" = {
         action = "grep_string";
         options.desc = "[S]earch Current [W]ord";
       };
