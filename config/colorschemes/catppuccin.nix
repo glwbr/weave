@@ -2,28 +2,51 @@ _: {
   colorschemes.catppuccin = {
     enable = true;
     settings = {
-      flavour = "macchiato"; # "latte", "mocha", "frappe", "macchiato", "auto"
-      no_bold = true;
+      background = {
+        light = "latte";
+        dark = "mocha";
+      };
+
+      dim_inactive = {
+        enabled = false;
+        shade = "dark";
+        percentage = 0.15;
+      };
+
+      flavour = "mocha"; # "latte", "mocha", "frappe", "macchiato", "auto"
+      # no_bold = false;
       no_italic = true;
-      no_underline = false;
-      transparent_background = true;
+      # no_underline = false;
       term_colors = true;
+      transparent_background = false;
+
+      styles = {
+        comments = ["italic"];
+        function = ["bold"];
+        keywords = ["italic"];
+        operators = ["bold"];
+        conditionals = ["bold"];
+        loops = ["bold"];
+        booleans = ["bold" "italic"];
+      };
+
       integrations = {
-        cmp = true;
-        notify = true;
-        harpoon = true;
-        gitsigns = true;
-        # which_key = true;
-        treesitter = true;
-        treesitter_context = true;
-        telescope.enabled = true;
-        indent_blankline.enabled = true;
-        mini.enabled = true;
+        telescope = {
+          enabled = true;
+          style = "nvchad";
+        };
+
         native_lsp = {
           enabled = true;
-          inlay_hints = {
-            background = true;
+          inlay_hints.background = true;
+
+          virtual_text = {
+            errors = ["italic"];
+            hints = ["italic"];
+            warnings = ["italic"];
+            information = ["italic"];
           };
+
           underlines = {
             errors = ["underline"];
             hints = ["underline"];
@@ -31,6 +54,14 @@ _: {
             warnings = ["underline"];
           };
         };
+
+        cmp = true;
+        fidget = true;
+        harpoon = true;
+        gitsigns = true;
+        notify = true;
+        treesitter = true;
+        which_key = true;
       };
     };
   };
