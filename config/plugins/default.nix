@@ -5,7 +5,7 @@ _: {
     ./git
     ./lsp
     ./telescope
-    ./treesitter
     ./todo-comments
+    ./treesitter
   ];
 }
