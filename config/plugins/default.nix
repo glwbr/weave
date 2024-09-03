@@ -7,5 +7,6 @@ _: {
     ./telescope
     ./todo-comments
     ./treesitter
+    ./ui
   ];
 }
