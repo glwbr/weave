@@ -8,9 +8,16 @@ on:
       - opened
       - synchronize
 
+  workflow_run:
+    workflows:
+      - "Bump Flake Inputs"
+    types:
+      - completed
+
 jobs:
   check-flake:
     runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'pull_request' || github.event.workflow_run.conclusion == 'success' }}
 
     steps:
       - name: Checkout
@@ -26,3 +33,6 @@ jobs:
 
       - name: Check Flake
         run: nix flake check
+
+      - name: Format Check
+        run: nixpkgs-fmt --check .
