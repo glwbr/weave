@@ -21,13 +21,16 @@ _: {
       transparent_background = true;
 
       styles = {
-        comments = ["italic"];
-        function = ["bold"];
-        keywords = ["italic"];
-        operators = ["bold"];
-        conditionals = ["bold"];
-        loops = ["bold"];
-        booleans = ["bold" "italic"];
+        comments = [ "italic" ];
+        function = [ "bold" ];
+        keywords = [ "italic" ];
+        operators = [ "bold" ];
+        conditionals = [ "bold" ];
+        loops = [ "bold" ];
+        booleans = [
+          "bold"
+          "italic"
+        ];
       };
 
       integrations = {
@@ -41,17 +44,17 @@ _: {
           inlay_hints.background = true;
 
           virtual_text = {
-            errors = ["italic"];
-            hints = ["italic"];
-            warnings = ["italic"];
-            information = ["italic"];
+            errors = [ "italic" ];
+            hints = [ "italic" ];
+            warnings = [ "italic" ];
+            information = [ "italic" ];
           };
 
           underlines = {
-            errors = ["underline"];
-            hints = ["underline"];
-            information = ["underline"];
-            warnings = ["underline"];
+            errors = [ "underline" ];
+            hints = [ "underline" ];
+            information = [ "underline" ];
+            warnings = [ "underline" ];
           };
         };
 

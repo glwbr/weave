@@ -1,6 +1,8 @@
-_: let
-  lua = x: {__raw = x;};
-in {
+_:
+let
+  lua = x: { __raw = x; };
+in
+{
   colorschemes.rose-pine = {
     enable = true;
     settings = {

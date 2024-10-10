@@ -27,14 +27,14 @@ _: {
       };
 
       sources = [
-        {name = "luasnip";}
-        {name = "nvim_lsp";}
+        { name = "luasnip"; }
+        { name = "nvim_lsp"; }
         {
           keyword_length = 3;
           name = "buffer";
           option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
         }
-        {name = "copilot";}
+        { name = "copilot"; }
         {
           keyword_length = 3;
           name = "path";
@@ -48,11 +48,29 @@ _: {
           col_offset = -3;
           sidePadding = 0;
           # border = ["┌" "─" "┐" "│" "┘" "─" "└" "│"];
-          border = ["╭" "─" "╮" "│" "╯" "─" "╰" "│"];
+          border = [
+            "╭"
+            "─"
+            "╮"
+            "│"
+            "╯"
+            "─"
+            "╰"
+            "│"
+          ];
         };
 
         documentation = {
-          border = ["╭" "─" "╮" "│" "╯" "─" "╰" "│"];
+          border = [
+            "╭"
+            "─"
+            "╮"
+            "│"
+            "╯"
+            "─"
+            "╰"
+            "│"
+          ];
           # border = ["┌" "─" "┐" "│" "┘" "─" "└" "│"];
           winhighlight = "FloatBorder:CmpBorder,Normal:CmpPmenu,CursorLine:CmpSel,Search:PmenuSel";
         };
@@ -60,7 +78,11 @@ _: {
 
       formatting = {
         # fields = ["abbr" "kind" "menu"];
-        fields = ["kind" "abbr" "menu"];
+        fields = [
+          "kind"
+          "abbr"
+          "menu"
+        ];
         expandable_indicator = true;
       };
     };

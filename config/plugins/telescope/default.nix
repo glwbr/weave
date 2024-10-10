@@ -1,4 +1,5 @@
 _: {
+  plugins.web-devicons.enable = true;
   plugins.telescope = {
     enable = true;
     extensions.fzf-native.enable = true;

@@ -4,9 +4,12 @@ _: {
     settings = {
       options.globalstatus = true;
       sections = {
-        lualine_a = ["mode"];
-        lualine_b = ["branch" "diff"];
-        lualine_c = ["filename"];
+        lualine_a = [ "mode" ];
+        lualine_b = [
+          "branch"
+          "diff"
+        ];
+        lualine_c = [ "filename" ];
 
         lualine_x = [
           "diagnostics"

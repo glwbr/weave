@@ -3,7 +3,11 @@ _: {
     {
       # Enable spellcheck for some filetypes
       event = "FileType";
-      pattern = ["tex" "latex" "markdown"];
+      pattern = [
+        "tex"
+        "latex"
+        "markdown"
+      ];
       #!TODO: check how to add enxtra langfiles
       command = "setlocal spell spelllang=en";
     }

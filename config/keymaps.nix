@@ -1,4 +1,5 @@
-_: let
+_:
+let
   #TODO: export these functions to lib
   mkKeymap = mode: key: action: desc: {
     inherit mode key action;
@@ -9,10 +10,13 @@ _: let
     };
   };
 
-  mkModeMap = mode: key: action: desc: (mkKeymap mode key action desc);
+  mkModeMap =
+    mode: key: action: desc:
+    (mkKeymap mode key action desc);
   mkNormap = mkModeMap "n";
   mkVismap = mkModeMap "v";
-in {
+in
+{
   globals.mapleader = " ";
 
   keymaps = [
@@ -23,9 +27,18 @@ in {
     (mkNormap "<Right>" "<nop>" "Disable right arrow")
 
     # Clipboard mappings
-    (mkKeymap ["n" "v"] "<leader>d" "\"_d" "Delete (no clipboard)")
-    (mkKeymap ["n" "v"] "<leader>y" "\"+y" "Yank to clipboard")
-    (mkKeymap ["n" "v"] "<leader>Y" "\"+Y" "Yank line to clipboard")
+    (mkKeymap [
+      "n"
+      "v"
+    ] "<leader>d" "\"_d" "Delete (no clipboard)")
+    (mkKeymap [
+      "n"
+      "v"
+    ] "<leader>y" "\"+y" "Yank to clipboard")
+    (mkKeymap [
+      "n"
+      "v"
+    ] "<leader>Y" "\"+Y" "Yank line to clipboard")
     (mkKeymap "x" "<leader>p" "\"_dP" "Paste over selection (no clipboard)")
 
     # Editing
@@ -38,7 +51,10 @@ in {
     (mkNormap "<leader>pv" "<cmd>Ex<CR>" "Project view")
 
     # Misc
-    (mkKeymap ["n" "i"] "<esc>" "<cmd>nohlsearch<CR><esc>" "Clear search & escape")
+    (mkKeymap [
+      "n"
+      "i"
+    ] "<esc>" "<cmd>nohlsearch<CR><esc>" "Clear search & escape")
 
     # Navigation
     (mkNormap "<C-d>" "<C-d>zz" "Scroll down, centered")
@@ -47,8 +63,14 @@ in {
     (mkNormap "N" "Nzzzv" "Previous search result, centered")
 
     # Snippets
-    (mkKeymap ["s" "i"] "<C-k>" "<cmd>JumpOrExpand<CR>" "Jump/expand snippet")
-    (mkKeymap ["s" "i"] "<C-j>" "<cmd>JumpBackward<CR>" "Jump backward snippet")
+    (mkKeymap [
+      "s"
+      "i"
+    ] "<C-k>" "<cmd>JumpOrExpand<CR>" "Jump/expand snippet")
+    (mkKeymap [
+      "s"
+      "i"
+    ] "<C-j>" "<cmd>JumpBackward<CR>" "Jump backward snippet")
 
     # Window management
     (mkNormap "<C-k>" "<C-w><C-k>" "Move to window above")

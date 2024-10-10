@@ -3,7 +3,7 @@ _: {
     enable = true;
     logger = {
       level = "warn"; # “off”, “error”, “warn”, “info”, “debug”, “trace”
-      floatPrecision = 0.01;
+      floatPrecision = 1.0e-2;
     };
 
     progress = {
@@ -19,7 +19,7 @@ _: {
       '';
       notificationGroup = "function(msg) return msg.lsp_client.name end";
       # List of LSP servers to ignore
-      ignore = [];
+      ignore = [ ];
       lsp = {
         progressRingbufSize = 0;
       };
